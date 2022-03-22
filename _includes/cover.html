@@ -1,0 +1,53 @@
+<span class="mobile btn-mobile-menu">
+  <i class="extra-big-icon iconify-inline icon-list btn-mobile-menu__icon" data-icon="gg:menu-round"></i>
+  <i class="extra-big-icon iconify-inline icon-x-circle btn-mobile-close__icon hidden" data-icon="ion:close-circle-outline"></i>
+</span>
+
+<header class="panel-cover {% if site.disable_landing_page %}panel-cover--collapsed{% endif %}"
+  style="background-image: url({{ site.baseurl }}/{{ site.cover }})">
+  <div class="panel-main panel-cover--overlay">
+
+    <div class="panel-main__inner panel-inverted">
+      <div class="panel-main__content">
+        <img src="{{ site.baseurl }}/images/avatar.jpg" class="user-image"
+        onmouseover="this.src='{{ site.baseurl }}/images/avatar-light.jpg';"
+        onmouseout="this.src='{{ site.baseurl }}/images/avatar.jpg';">
+        <h1 class="panel-cover__title panel-title">
+          <a href="{{ site.baseurl }}/">{{ site.author.name }}</a>
+        </h1>
+        </a>
+        <h6 class="panel-cover__title panel-subtitle">{{ site.author.pronouns }}
+          <i class="medium-icon iconify-inline" data-icon="foundation:male-symbol"></i>
+        </h6>
+        {% include socials.html%}
+        
+        <form class="search-container" onsubmit="return searchTheArchives()" >
+          <input type="search" id="search-input" placeholder="Search.." autocomplete="off" style="padding-right: 40px;">
+        </form>
+
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+        
+        <div class="navigation-wrapper">
+          <p class="panel-cover__description">{{ site.description }}</p>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              {% for collection in site.collections %}
+              {% if collection.label != "posts" %}
+              <li class="navigation__item">
+                <a href="{{ site.baseurl }}/{{ collection.label }}" class="blog-button" id="{{ collection.label }}"
+                onclick="activateButton(this.id)">{{ collection.title }}</a>
+              </li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+        
+        <hr class="panel-cover__divider">
+      </div>
+
+    </div>
+
+    <!-- <div class="panel-cover--overlay"></div> -->
+  </div>
+</header>

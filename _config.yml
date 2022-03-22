@@ -1,0 +1,62 @@
+# Site settings
+title: "Mineversal's Blog"
+description: "Universe in your hand"
+url: 'https://mineversal.org'
+cover: images/sky.jpg
+baseurl: ''
+google_analytics: 'G-WHB7C61V2K'
+disqus_shortname: 'zulma'
+
+author:
+  name: 'Mineversal'
+  pronouns: "Mineversal Organization & Foundation"
+  email: admin@mineversal.com
+  github: Mineversal
+  linkedin: company/Mineversal
+  stackoverflow: 
+  hackerrank: 
+  leetcode: 
+
+collections_dir: my_collections
+collections:
+  news:
+    output: true
+    permalink: /:collection/:path
+    title: "News"
+  project:
+    output: true
+    permalink: /:collection/:path
+    title: "Project"
+  # word-embedding:
+  #   output: true
+  #   permalink: /:collection/:path
+  #   title: "Word Embedding"
+
+defaults:
+  -
+    scope:
+      path: "my_collections/*" # all files inside my_collections
+    values:
+      layout: "post" #post.html
+
+# Build settings
+destination: _site
+# paginate: 10
+# permalink: /:collection
+markdown: kramdown
+highlighter: rouge
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+kramdown:
+  mathjax: true  #use mathjax to process math equations
+  input: GFM # use Github Flavored Markdown
+  hard_wrap: false # do not replace newlines by <br>
+
+# plugins:
+#   - jekyll-paginate
+#   - jekyll-spaceship
+
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock']

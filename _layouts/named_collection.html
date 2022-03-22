@@ -1,0 +1,60 @@
+---
+layout: default
+---
+{% capture workspace_collections %}
+{% assign collection_name = page.collection_name | default: include.collection_name | default: nil %}
+{% assign target_collection = site[collection_name] %}
+
+<div class="main">
+  {{ content }}
+  {% assign has_output = False %}
+  {%- if target_collection.size > 0 -%}
+  {% capture workspace_collection %}
+  <div class="main-post-list">
+    {% assign prevYear = 0 %}
+    {% assign sorted_posts = site[collection_name] | sort: 'date' | reverse %}
+    {% for post in sorted_posts %}
+    {% assign currYear = post.date | date: "%Y" %}
+    {% if currYear != prevYear %}
+    {% if prevYear != 0 %}</ol>{% endif %}
+    <h1 class="page-heading">{{ currYear }}</h1>
+    <ol class="timeline">
+      {% assign prevYear = currYear %}
+      {% endif %}
+        <li class="timeline-inverted">
+          <div class="timeline-album">
+            <div class="timeline-image">
+              {% if post.cover %}
+                {% assign curr_cover = post.cover | prepend: post.slug | prepend: "media/" %}
+              {% else %}
+                {% assign curr_cover = '/images/avatar-light.jpg' %}
+              {% endif %}
+              <img class="img-me" src="{{ curr_cover }}" alt="">
+            </div>
+          </div>
+          <div class="timeline-panel">
+            <h2 class="post-list__post-title post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            </h2>
+            <p class="excerpt">{{ post.excerpt | strip_html }}&hellip;</p>
+            <div class="post-list__meta">
+              <time datetime="{{ post.date | date: '%Y-%m-%d %H:%M' }}" class="post-list__meta--date date"> Published on :
+                {{ post.date | date: "%-d %b %Y" }}</time>
+            </div>
+            <hr class="post-list__divider">
+          </div>
+        </li>
+        {% if forloop.last %} </ol>{% endif %}
+      {% endfor %}
+    <hr class="post-list__divider ">
+
+    <!-- {% if paginator.previous_page or paginator.next_page %}
+        {% include pagination.html %}
+    {% endif %} -->
+  </div>
+  {% endcapture %}
+  {%- if has_output == True -%}
+  {{- workspace_collection -}}{% assign workspace_collection = nil %}
+  {%- endif -%}
+  {%- endif -%}
+</div>
+{% endcapture %}{{ workspace_collections | strip }}{% assign workspace_collections = nil %}

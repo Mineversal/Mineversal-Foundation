@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <p class="post-meta__body">
+        <i class="medium-icon iconify-inline" data-icon="bi:clock-history"></i>
+        <span id="reading-time">
+          {% assign words = page.content | strip_html | number_of_words %}
+          {{ words | divided_by: 250 | plus: 1 }} mins read
+        </span>
+      </p>
+      <time datetime="{{ page.date | date: '%Y-%m-%d %H:%M' }}" class="post-meta__body date">Published on: {{ page.date | date: "%-d %b %Y" }}</time>
+      {% if page.tags.size > 0 %}
+      <p class="post-meta__tags">Published by: {% for tag in page.tags %}<a href="{{ site.baseurl }}/tags/#{{ tag }}">{{ tag }}</a>{% if forloop.last == false %} & {% endif %}{% endfor %}</p>
+      {% endif %}
+    </div>
+  </header>
+
+  <section class="post">
+    <h1 id={{ page.title }}> {{ page.title }}</h1>
+    {{ content }}
+  </section>
+</article>
+{% if page.comments != false %}
+  {% include disqus.html %}
+{% endif %}

@@ -1,0 +1,47 @@
+{% if jekyll.environment == 'development' %}
+  {% assign curr_baseurl = site.baseurl %}
+{% else %}
+  {% assign curr_baseurl = site.baseurl | prepend: site.url%}
+{% endif %}
+<footer class="footer">
+  <!-- <span class="footer__copyright">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. All rights reserved.</span> -->
+  
+  <!-- Adding Iconify -->
+  <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+  
+  <!-- Adding MathJax -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      "tex2jax": {
+        inlineMath: [['$','$']],
+        processEscapes: true
+      },
+      "HTML-CSS": { linebreaks: { automatic: true } },
+      "SVG": { linebreaks: { automatic: true } },
+    });
+  </script>
+  {% if jekyll.environment != "development" %}
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+  </script>
+  {% else %}
+  <script type="text/javascript" async
+    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+  </script>
+  {% endif %}
+  
+  <!-- Adding main.js -->
+  <script type="text/javascript" src="{{ curr_baseurl }}/js/main.js?{{site.time | date: '%s%N'}}"></script>
+  
+  <!-- Adding Google Analytics -->
+  {% if site.google_analytics and jekyll.environment != "development" %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{{ site.google_analytics }}');
+    </script>
+  {% endif %}
+</footer>

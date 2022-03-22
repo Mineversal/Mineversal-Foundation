@@ -1,0 +1,45 @@
+---
+layout: default
+---
+{% assign all_tags = "" | split: '' %}
+{% assign all_researchers = "" | split: '' %}
+{% for collection in site.collections %}
+  {% for post in site[collection.label] %}
+    {% if post.tags %}
+      {% assign all_tags = all_tags | concat: post.tags %}
+    {% endif %}
+    {% if post.researchers %}
+      {% assign all_researchers = all_researchers | concat: post.researchers %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+{% assign all_tags = all_tags | uniq | sort %}
+
+<div class="main">
+  <h2>Tags:</h2>
+  <div class="tags">
+    {% for tagname in all_tags  %} 
+    <a href="#{{ tagname }}">{{ tagname }}</a>
+    {% endfor %}
+  </div>
+
+  <hr class="post-list__divider">
+
+  {% for tagname in all_tags %} 
+    <div id="{{ tagname }}">  
+      <h4> {{ tagname }} </h4>
+
+      <ul>
+        {% for collection in site.collections %}
+          {% for post in site[collection.label] %}
+            {% if post.tags contains tagname %} 
+            <li>
+              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>

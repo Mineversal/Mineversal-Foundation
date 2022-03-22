@@ -1,0 +1,49 @@
+---
+layout: default
+robots: noindex
+sitemap:
+  exclude: 'yes'
+<!-- permalink: /search-results/ -->
+---
+
+<!-- Html Elements for Search -->
+<div class="main-post-list">
+  <h1 class="page-heading">Results: </h1>
+  <div id="results-container"></div>
+  <hr class="post-list__divider ">
+</div>
+
+{% if jekyll.environment == 'development' %}
+  {% assign curr_baseurl = site.baseurl %}
+{% else %}
+  {% assign curr_baseurl = site.baseurl | prepend: site.url%}
+{% endif %}
+
+<!-- Configuration -->
+<script>
+    // SimpleJekyllSearch({
+    //   searchInput: document.getElementById('search-input'),
+    //   resultsContainer: document.getElementById('results-container'),
+    //   json: '{{curr_baseurl}}/js/search.json',
+    //   searchResultTemplate: `<li>
+    //     <h2 class="post-list__post-title post-title"><a href="{url}">{title}</a></h2>
+    //     <div class="post-list__meta">
+    //       <div class="post-list__meta--date date"> Published on: {date} in {collection}</div>
+    //     </div>
+    //     <hr class="post-list__divider">
+    //   </li>`,
+    //   limit: 100
+    // });
+    SimpleBlogSearch({
+      searchDataPath: '{{ curr_baseurl }}/js/search.json',
+      dataType: 'json',
+      searchInputID: 'search-input',
+      resultsDivID: 'results-container',
+      resultULClass: 'post-list',
+      highlightKeywordClass: 'search_keyword',
+      noResultsMessage: "No results found!",
+      processDataFunc: function(data){ return data },
+      captionSize: 200, //has to be even
+      limit: 100,
+    });
+</script>

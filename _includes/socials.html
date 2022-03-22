@@ -1,0 +1,67 @@
+<nav class="cover-navigation navigation--social">
+    <ul class="navigation">
+
+      {% if site.author.email %}
+      <!-- Email -->
+      <li class="navigation__item">
+        <a href="mailto:{{ site.author.email }}" target="_blank" title="Email">
+          <i class="big-icon iconify-inline" data-icon="fluent:mail-copy-24-filled"></i>
+        </a>
+      </li>
+      {% endif %}
+
+      {% if site.author.linkedin %}
+      <!-- LinkedIn -->
+      <li class="navigation__item">
+        <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" title="LinkedIn">
+          <i class="big-icon iconify-inline" data-icon="akar-icons:linkedin-fill"></i>
+        </a>
+      </li>
+      {% endif %}
+
+      {% if site.author.github %}
+      <!-- GitHub -->
+      <li class="navigation__item">
+        <a href="https://www.github.com/{{ site.author.github }}" target="_blank" title="GitHub">
+          <i class="big-icon iconify-inline" data-icon="akar-icons:github-fill"></i>
+        </a>
+      </li>
+      {% endif %}
+
+      {% if site.author.stackoverflow %}
+      <!-- Stackoverflow -->
+      <li class="navigation__item">
+        <a href="https://www.stackoverflow.com/users/{{ site.author.stackoverflow }}" target="_blank" title="StackOverflow">
+          <i class="big-icon iconify-inline" data-icon="el:stackoverflow"></i>
+        </a>
+      </li>
+      {% endif %}
+
+      {% if site.author.hackerrank %}
+      <!-- Hackerrank -->
+      <li class="navigation__item">
+        <a href="https://www.hackerrank.com/{{ site.author.hackerrank }}" target="_blank" title="Hackerrank">
+          <i class="big-icon iconify-inline" data-icon="cib:hackerrank"></i>
+        </a>
+      </li>
+      {% endif %}
+
+      {% if site.author.leetcode %}
+      <!-- Leetcode -->
+      <li class="navigation__item">
+        <a href="https://www.leetcode.com/{{ site.author.leetcode }}" target="_blank" title="Leetcode">
+          <i class="big-icon iconify-inline" data-icon="simple-icons:leetcode"></i>
+          <!-- <span class="label">Leetcode</span> -->
+        </a>
+      </li>
+      {% endif %}
+
+      <!-- RSS -->
+      <li class="navigation__item">
+        <a href="{{ site.baseurl }}/feed.xml" title="Subscribe (RSS)" target="_blank">
+          <i class="big-icon iconify-inline" data-icon="ph:rss-bold"></i>
+          <!-- <span class="label">RSS</span> -->
+        </a>
+      </li>
+    </ul>
+  </nav>

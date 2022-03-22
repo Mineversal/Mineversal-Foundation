@@ -1,0 +1,21 @@
+---
+sitemap:
+  exclude: 'yes'
+---
+[
+  {% for collection in site.collections %}
+  {% assign outer_last_idx = forloop.length %}
+    {% assign outer_idx = forloop.index %}
+    {% for post in site[collection.label] %}
+      {% assign inner_last_idx = forloop.length %}
+      {% assign inner_idx = forloop.index %}
+      {
+        "collection": "{{ collection.title }}",
+        "title"     : "{{ post.title | escape }}",
+        "url"       : "{{ site.baseurl }}{{ post.url }}",
+        "date"      : "{{ post.date | date: '%d/%m/%Y'}}",
+        "content": {{ post.content | strip_html | escape | jsonify}}
+      }{% unless outer_idx == outer_last_idx and inner_idx == inner_last_idx %},{% endunless %}
+    {% endfor %}
+  {% endfor %}
+]
