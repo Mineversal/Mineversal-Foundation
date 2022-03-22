@@ -26,7 +26,7 @@ build the blog offline on your machine:
 
 - clone the repository from GitHub:
   ```
-  git clone https://github.com/AzharRizky/Zulma-Blog.git
+  git clone https://github.com/Mineversal/Mineversal-Foundation.git
   ```
 - Install gems found in `Gemfile`:
   ```
