@@ -5,7 +5,7 @@ cover: /image0.png
 tags: ["Application"]
 ---
 
-## 📊 Vote made easy <img src="https://mineversal.com/assets/img/votie.png" width=25/>
+## 📊 Vote made easy <img src="https://mineversal.com/assets/img/votie.png" width=50/>
 Start your voting campaign and get best decision
 
 ## 📱 Feature 
