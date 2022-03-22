@@ -22,7 +22,8 @@ Start your voting campaign and get best decision
 Register, login, & create polling for get best decision.
 Or see video Tutorial [here](https://youtu.be/kSUnZ2RfAVc)
 
-## 🛒 Dowload & Use Here
+## 🛒 Download & Use Here
+
 Google Play Store
 -----------------
 <p align="center"><a href='https://play.google.com/store/apps/details?id=com.mineversal.votie&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' width=350/></a></p>
@@ -36,6 +37,7 @@ Amazon Appstore
 <p align="center"><a href='https://www.amazon.com/gp/product/B09NMXLJHM'><img alt='Get it on Amazon Appstore' src='https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/res/images/amazon-appstore-badge-english-black.png' width=300/></a></p>
 
 ## 🖼️ Application Preview
+
 Home Page
 ---------
 <p align="center"><img src="https://play-lh.googleusercontent.com/YNsAel5mR5ZeTueWe_1KrlROWsMV3rNJYR0CbWGNRfhG5CUB-TOXPBXJwgixsDksQ0g=w1366-h649-rw" width=300/></p>
