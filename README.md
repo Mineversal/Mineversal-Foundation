@@ -5,11 +5,6 @@ url: https://mineversal.org. This source code was adapted from the
 [Jekyll-Uno](https://github.com/joshgerdes/jekyll-uno) theme created by
 Josh Gerdes.
 
-<div align="center">
-  <img src="images/assets/peek_web.gif" width=750>
-  <img src="images/assets/peek_mobile.gif" height=500>
-</div>
-
 ## Dependencies
 
 The following are the prerequisites that need to be installed to be able to 
@@ -171,10 +166,6 @@ Now, let's discuss a few of these global variables:
 
 The following are some of the past variables shown in the blog:
 
-<div align="center">
-  <img src="images/assets/cover-desc.png" height=500>
-</div>
-
 ## index.html
 
 The index.html file is the main HTMl layout for this project. If you open this
@@ -266,19 +257,11 @@ check the following three files:
   [Simple Blog Search](https://github.com/SeraphRoy/SimpleBlogSearch) plugin
   that does the searching using the JSON database created at deployment.
 
-<div align="center">
-  <img src="images/assets/peek_search.gif" width=750>
-</div>
-
 ## Minutes to Read
 
 One of the most important features implemented here is to show the number of
 minutes an average reader would take to read a certain article. You can find
 this piece of information at the first line of any article.
-
-<div align="center">
-  <img src="images/assets/to_read.png" width=750>
-</div>
 
 The piece of code responsible for this feature can be found in the `post.html`
 layout file. In particular, the following few lines:
@@ -340,10 +323,6 @@ The HTML for the disqus plugin, can be found in the `disqus.html` file.
 > comments: false
 > ---
 > ```
-
-<div align="center">
-  <img src="images/assets/disqus.png" width=750>
-</div>
 
 ## Google Analytics
 
