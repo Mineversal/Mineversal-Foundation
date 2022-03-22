@@ -5,14 +5,16 @@ url: 'https://mineversal.org'
 cover: images/sky.jpg
 baseurl: ''
 google_analytics: 'G-WHB7C61V2K'
-disqus_shortname: 'zulma'
+disqus_shortname: ''
 
 author:
   name: 'Mineversal'
   pronouns: "Mineversal Organization & Foundation"
   email: admin@mineversal.com
   github: Mineversal
-  linkedin: company/Mineversal
+  facebook: Mineversal
+  twitter: mineversal_
+  linkedin: 
   stackoverflow: 
   hackerrank: 
   leetcode: 
