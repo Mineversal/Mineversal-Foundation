@@ -45,16 +45,16 @@ Or see video Tutorial [here](https://youtu.be/kSUnZ2RfAVc)
 <p align="center"><img src="https://play-lh.googleusercontent.com/GDyw-qgh_EpDXNHmfWPSwj4zY4KRbei0mGPjZL_CKxZNIkl_mv3JUmXqHS6MEHjJpQ=w1366-h649-rw" width=300/></p>
 
 ### Result Page
-<img src="https://play-lh.googleusercontent.com/HrmuG4KjKCs8hw-WichPznd9MgJWouJ23Be4SBNCmtiUqQzpHsX3K_kzQawlVZM5Lw=w1366-h649-rw" width=300/>
+<p align="center"><img src="https://play-lh.googleusercontent.com/HrmuG4KjKCs8hw-WichPznd9MgJWouJ23Be4SBNCmtiUqQzpHsX3K_kzQawlVZM5Lw=w1366-h649-rw" width=300/></p>
 
 ### Detail Vote
-<img src="https://play-lh.googleusercontent.com/QlEVgLu_fmFvh_6FlH9p5zXiHBuC6Cs3gZMlqXECIm2aDrOx3Nkib72cNDsXjHpuz00=w1366-h649-rw" width=300/>
+<p align="center"><img src="https://play-lh.googleusercontent.com/QlEVgLu_fmFvh_6FlH9p5zXiHBuC6Cs3gZMlqXECIm2aDrOx3Nkib72cNDsXjHpuz00=w1366-h649-rw" width=300/></p>
 
 ### Images Options
-<img src="https://play-lh.googleusercontent.com/QKDFOipHF5Ql5G2RGH9YuUqXPQ3CL8Ztnt_gsaGKBrcRfgGeE2aTm6CvZSLhatkn9ck=w1366-h649-rw" width=300/>
+<p align="center"><img src="https://play-lh.googleusercontent.com/QKDFOipHF5Ql5G2RGH9YuUqXPQ3CL8Ztnt_gsaGKBrcRfgGeE2aTm6CvZSLhatkn9ck=w1366-h649-rw" width=300/></p>
 
 ### Percentage Result
-<img src="https://play-lh.googleusercontent.com/wXMBYSHEfJ1YRLSugqUqKBqpOtcBhYJaBpUHbvwrvea73T13yWlhmkvYOKihnbSzPJE=w1366-h649-rw" width=300/>
+<p align="center"><img src="https://play-lh.googleusercontent.com/wXMBYSHEfJ1YRLSugqUqKBqpOtcBhYJaBpUHbvwrvea73T13yWlhmkvYOKihnbSzPJE=w1366-h649-rw" width=300/></p>
 
 ## ✅ License
 Distributed under the MIT License. See LICENSE for more information.
