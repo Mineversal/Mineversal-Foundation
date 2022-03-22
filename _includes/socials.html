@@ -1,6 +1,14 @@
 <nav class="cover-navigation navigation--social">
     <ul class="navigation">
 
+      <!-- Website -->
+      <li class="navigation__item">
+        <a href="https://{{ site.author.website }}.com" target="_blank" title="Website">
+          <i class="big-icon iconify-inline" data-icon="akar-icons:globe-fill"></i>
+        </a>
+      </li>
+      {% endif %}
+
       {% if site.author.email %}
       <!-- Email -->
       <li class="navigation__item">
@@ -13,7 +21,7 @@
       {% if site.author.linkedin %}
       <!-- LinkedIn -->
       <li class="navigation__item">
-        <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" title="LinkedIn">
+        <a href="https://www.linkedin.com/company/{{ site.author.linkedin }}" target="_blank" title="LinkedIn">
           <i class="big-icon iconify-inline" data-icon="akar-icons:linkedin-fill"></i>
         </a>
       </li>
@@ -24,6 +32,34 @@
       <li class="navigation__item">
         <a href="https://www.github.com/{{ site.author.github }}" target="_blank" title="GitHub">
           <i class="big-icon iconify-inline" data-icon="akar-icons:github-fill"></i>
+        </a>
+      </li>
+      {% endif %}
+
+      {% if site.author.instagram %}
+
+      <!-- Instagram -->
+      <li class="navigation__item">
+        <a href="https://www.instagram.com/{{ site.author.instagram }}" target="_blank" title="Instagram">
+          <i class="big-icon iconify-inline" data-icon="akar-icons:instagram-fill"></i>
+        </a>
+      </li>
+      {% endif %}
+
+      {% if site.author.facebook %}
+      <!-- Facebook -->
+      <li class="navigation__item">
+        <a href="https://www.facebook.com/{{ site.author.facebook }}" target="_blank" title="Facebook">
+          <i class="big-icon iconify-inline" data-icon="akar-icons:facebook-fill"></i>
+        </a>
+      </li>
+      {% endif %}
+
+      {% if site.author.twitter %}
+      <!-- Twitter -->
+      <li class="navigation__item">
+        <a href="https://www.twitter.com/{{ site.author.twitter }}" target="_blank" title="Twitter">
+          <i class="big-icon iconify-inline" data-icon="akar-icons:twitter-fill"></i>
         </a>
       </li>
       {% endif %}
